@@ -14,3 +14,9 @@ Measurer components that can be attached per FCS component are different
  |CharacterCircularFCS|{SMA, EMA} AngularMeasurer|
 
 # Blueprint API Reference
+## {Linear, CharacterLinear} FCS SceneComponent
+## {Circular, CharacterCircular} FCS SceneComponent
+## SMA {Velocity, Angular} Measurer SceneComponent
+## EMA {Velocity, Angular} Measurer SceneComponent
+## IVelocityObservableInterface
+## IAngularObservableInterface
