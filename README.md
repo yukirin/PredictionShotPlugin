@@ -18,7 +18,7 @@ Measurer components that can be attached per FCS component are different
 ### `Variables`
 
  |Type|Name|Description|
- |---|---|---|
+ |--:|---|---|
  |int32|Accuracy|Accuracy of prediction calculation|
  |float|ObserverTickInterval|Observe the target at the interval|
  |ECollisionChannel|TraceChannel|Trace channel for measuring the height of the landing point|
@@ -33,6 +33,7 @@ Measurer components that can be attached per FCS component are different
  
 ## {Circular, CharacterCircular} FCS SceneComponent
 ### `Variables`
+
  |Type|Name|Description|
  |--:|---|---|
  |int32|Accuracy|Accuracy of prediction calculation|
@@ -40,24 +41,32 @@ Measurer components that can be attached per FCS component are different
  |ECollisionChannel|TraceChannel|Trace channel for measuring the height of the landing point|
  |float|BiasFromGround|Z direction bias from the ground to adjust the predicted shooting point|
  |IAngularObservable|Observer|Object implementing IAngularObservable|
+ 
 ### `Functions`
+
  |Return Type|Name|Description|
  |--:|---|---|
  |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To<br>)|Calculate predicted shooting direction
+ 
 ## SMA {Velocity, Angular} Measurer SceneComponent
 ### `Variables`
+
 |Type|Name|Description|
 |--:|---|---|
 |int32|NumOfFrames|Number of frames to be recorded by SMA|
 |int32|CurrentIndex|Index representing the latest data|
 |TArray&lt;float&gt;|{Velocity, Angular} RecordingArray|Recording array|
+
 ## EMA {Velocity, Angular} Measurer SceneComponent
 ### `Variables`
+
 |Type|Name|Description|
 |--:|---|---|
 |float|SmoothingFactor|Smoothing factor of EMA|
+
 ## VelocityObservable Interface
 ### `Functions`
+
 |Return Type|Name|Description|
 |--:|---|---|
 |void|SetTarget(<br>AActor* Target<br>)|Set target|
@@ -67,8 +76,10 @@ Measurer components that can be attached per FCS component are different
 |float|GetJumpVelocity()|Get speed in the Z direction when jumping (Character only)|
 |float|GetVelocity()|Get velocity|
 |float|GetAcceleration()|Get acceleration|
+
 ## AngularObservable Interface
 ### `Functions`
+
 |Return Type|Name|Description|
 |--:|---|---|
 |void|SetTarget(<br>AActor* Target<br>)|Set target|
@@ -80,19 +91,24 @@ Measurer components that can be attached per FCS component are different
 |float|GetAngularAcceleration()|Get angular acceleration (radian)|
 |TArray&lt;FVector&gt;|GetLocations()|Position of the last 3 frames|
 |int32|GetStartIndex()|An index representing the oldest position among the data acquired by the above GetLocations
+
 ## VelocityMeasurable Interface
 By implementing this interface and attaching to the {CharacterLinear, Linear} FCS component, you can calculate predicted shots with your own measurement method
 ### `Functions`
+
 |Return Type|Name|Description|
 |--:|---|---|
 |void|Reset(<br>const AActor*,<br>const Target<br>)|Reset the measurement|
 |void|SetFlyingMode(<br>const bool bIsFlyingMode<br>)|False if attached to CharacterFCS, true is passed otherwise|
 |bool|Measure(<br>const AActor* const Target,<br>float& OutVelocity,<br>float& OutAcceleration,<br>float& OutZVelocity,<br>float& OutZAcceleration,<br>float& OutJumpVelocity<br>)|Measure the target (The return value is a dummy parameter)|
+
 ## AngularMeasurable Interface
 By implementing this interface and attaching to the {CharacterCircular, Circular} FCS component, you can calculate predicted shots with your own measurement method
 ### `Functions`
+
 |Return Type|Name|Description|
 |--:|---|---|
 |void|Reset(<br>const AActor*,<br>const Target<br>)|Reset the measurement|
 |void|SetFlyingMode(<br>const bool bIsFlyingMode<br>)|False if attached to CharacterFCS, true is passed otherwise|
 |bool|Measure(<br>const AActor* const Target,<br>float& OutAngularVelocity,<br>float& OutAngularAcceleration,<br>float& OutZVelocity,<br>float& OutZAcceleration,<br>float& OutJumpVelocity,<br>TArray&lt;FVector&gt;& OutLocations,<br>int32& OutStartIndex<br>)|Measure the target (The return value is a dummy parameter)|
+
