@@ -42,10 +42,16 @@ Measurer components that can be attached per FCS component are different
  |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To)|Calculate predicted shooting direction
 ## SMA {Velocity, Angular} Measurer SceneComponent
 ### `Variables`
-### `Functions`
+|Type|Name|Description|
+|--:|---|---|
+|int32|NumOfFrames|Number of frames to be recorded by SMA|
+|int32|CurrentIndex|Index representing the latest data|
+|TArray&lt;float&gt;|{Velocity, Angular} RecordingArray|Recording array|
 ## EMA {Velocity, Angular} Measurer SceneComponent
 ### `Variables`
-### `Functions`
+|Type|Name|Description|
+|--:|---|---|
+|float|SmoothingFactor|Smoothing factor of EMA|
 ## VelocityObservable Interface
 ### `Functions`
 ## AngularObservable Interface
