@@ -16,10 +16,30 @@ Measurer components that can be attached per FCS component are different
 # Blueprint API Reference
 ## {Linear, CharacterLinear} FCS SceneComponent
 ### `Variables`
+ |Type|Name|Description|
+ |--:|---|---|
+ |int32|Accuracy|Accuracy of prediction calculation|
+ |float|ObserverTickInterval|Observe the target at the interval|
+ |ECollisionChannel|TraceChannel|Trace channel for measuring the height of the landing point|
+ |float|BiasFromGround|Z direction bias from the ground to adjust the predicted shooting point|
+ |IVelocityObservable|Observer|Object implementing IVelocityObservable|
 ### `Functions`
+ |Return Type|Name|Description|
+ |--:|---|---|
+ |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To)|Calculate predicted shooting direction|
 ## {Circular, CharacterCircular} FCS SceneComponent
 ### `Variables`
+ |Type|Name|Description|
+ |--:|---|---|
+ |int32|Accuracy|Accuracy of prediction calculation|
+ |float|ObserverTickInterval|Observe the target at the interval|
+ |ECollisionChannel|TraceChannel|Trace channel for measuring the height of the landing point|
+ |float|BiasFromGround|Z direction bias from the ground to adjust the predicted shooting point|
+ |IAngularObservable|Observer|Object implementing IAngularObservable|
 ### `Functions`
+ |Return Type|Name|Description|
+ |--:|---|---|
+ |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To)|Calculate predicted shooting direction
 ## SMA {Velocity, Angular} Measurer SceneComponent
 ### `Variables`
 ### `Functions`
