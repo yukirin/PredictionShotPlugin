@@ -26,7 +26,7 @@ Measurer components that can be attached per FCS component are different
 ### `Functions`
  |Return Type|Name|Description|
  |--:|---|---|
- |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To)|Calculate predicted shooting direction|
+ |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To<br>)|Calculate predicted shooting direction|
 ## {Circular, CharacterCircular} FCS SceneComponent
 ### `Variables`
  |Type|Name|Description|
@@ -39,7 +39,7 @@ Measurer components that can be attached per FCS component are different
 ### `Functions`
  |Return Type|Name|Description|
  |--:|---|---|
- |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To)|Calculate predicted shooting direction
+ |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To<br>)|Calculate predicted shooting direction
 ## SMA {Velocity, Angular} Measurer SceneComponent
 ### `Variables`
 |Type|Name|Description|
@@ -54,8 +54,28 @@ Measurer components that can be attached per FCS component are different
 |float|SmoothingFactor|Smoothing factor of EMA|
 ## VelocityObservable Interface
 ### `Functions`
+|Return Type|Name|Description|
+|--:|---|---|
+|void|SetTarget(<br>AActor* Target<br>)|Set target|
+|AActor*|GetTarget()|Get target|
+|float|GetZVelocity()|Get speed in the Z direction when moving on a slope or the like (Character only)|
+|float|GetZAcceleration()|Get acceleration in the Z direction when moving on a slope or the like (Character only)|
+|float|GetJumpVelocity()|Get speed in the Z direction when jumping (Character only)|
+|float|GetVelocity()|Get velocity|
+|float|GetAcceleration()|Get acceleration|
 ## AngularObservable Interface
 ### `Functions`
+|Return Type|Name|Description|
+|--:|---|---|
+|void|SetTarget(<br>AActor* Target<br>)|Set target|
+|AActor*|GetTarget()|Get target|
+|float|GetZVelocity()|Get speed in the Z direction when moving on a slope or the like (Character only)|
+|float|GetZAcceleration()|Get acceleration in the Z direction when moving on a slope or the like (Character only)|
+|float|GetJumpVelocity()|Get speed in the Z direction when jumping (Character only)|
+|float|GetAngularVelocity()|Get angular velocity (radian)|
+|float|GetAngularAcceleration()|Get angular acceleration (radian)|
+|TArray&lt;FVector&gt;|GetLocations()|Position of the last 3 frames|
+|int32|GetStartIndex()|An index representing the oldest position among the data acquired by the above GetLocations
 ## VelocityMeasurable Interface
 By implementing this interface and attaching to the {CharacterLinear, Linear} FCS component, you can calculate predicted shots with your own measurement method
 ### `Functions`
