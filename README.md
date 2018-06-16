@@ -98,7 +98,7 @@ By implementing this interface and attaching to the {CharacterLinear, Linear} FC
 
 |Return Type|Name|Description|
 |--:|---|---|
-|void|Reset(<br>const AActor*,<br>const Target<br>)|Reset the measurement|
+|void|Reset(<br>const AActor* const Target<br>)|Reset the measurement|
 |void|SetFlyingMode(<br>const bool bIsFlyingMode<br>)|False if attached to CharacterFCS, true is passed otherwise|
 |bool|Measure(<br>const AActor* const Target,<br>float& OutVelocity,<br>float& OutAcceleration,<br>float& OutZVelocity,<br>float& OutZAcceleration,<br>float& OutJumpVelocity<br>)|Measure the target (The return value is a dummy parameter)|
 
@@ -108,7 +108,7 @@ By implementing this interface and attaching to the {CharacterCircular, Circular
 
 |Return Type|Name|Description|
 |--:|---|---|
-|void|Reset(<br>const AActor*,<br>const Target<br>)|Reset the measurement|
+|void|Reset(<br>const AActor* const Target<br>)|Reset the measurement|
 |void|SetFlyingMode(<br>const bool bIsFlyingMode<br>)|False if attached to CharacterFCS, true is passed otherwise|
 |bool|Measure(<br>const AActor* const Target,<br>float& OutAngularVelocity,<br>float& OutAngularAcceleration,<br>float& OutZVelocity,<br>float& OutZAcceleration,<br>float& OutJumpVelocity,<br>TArray&lt;FVector&gt;& OutLocations,<br>int32& OutStartIndex<br>)|Measure the target (The return value is a dummy parameter)|
 
