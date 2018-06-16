@@ -18,7 +18,7 @@ Measurer components that can be attached per FCS component are different
 ### `Variables`
 
  |Type|Name|Description|
- |--:|---|---|
+ |---|---|---|
  |int32|Accuracy|Accuracy of prediction calculation|
  |float|ObserverTickInterval|Observe the target at the interval|
  |ECollisionChannel|TraceChannel|Trace channel for measuring the height of the landing point|
