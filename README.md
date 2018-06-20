@@ -29,7 +29,7 @@ Measurer components that can be attached per FCS component are different
 
  |Return Type|Name|Description|
  |--:|---|---|
- |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To<br>)|Calculate predicted shooting direction|
+ |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To<br>)|Calculate predicted shooting direction<br>BulletGravityScale - Set the value of GravityScale set for the bullet to be shot|
  
 ## {Circular, CharacterCircular} FCS SceneComponent
 ### `Variables`
@@ -46,7 +46,7 @@ Measurer components that can be attached per FCS component are different
 
  |Return Type|Name|Description|
  |--:|---|---|
- |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To<br>)|Calculate predicted shooting direction
+ |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To<br>)|Calculate predicted shooting direction<br>BulletGravityScale - Set the value of GravityScale set for the bullet to be shot|
  
 ## SMA {Velocity, Angular} Measurer SceneComponent
 ### `Variables`
