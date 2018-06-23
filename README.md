@@ -32,6 +32,8 @@ Measurer components that can be attached per FCS component are different
  |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To<br>)|Calculate predicted shooting direction<br><br>BulletGravityScale - Set the value of GravityScale set for the bullet to be shot<br>TargetGravityScale - Set the value of GravityScale set for Target|
  
 ## {Circular, CharacterCircular} FCS SceneComponent
+***If Character's AirControl value is fairly low, CharacterLinearFCS may be used during jumping 
+(When the AirControl value is low, it is almost linear movement during jumping)***
 ### `Variables`
 
  |Type|Name|Description|
