@@ -33,7 +33,9 @@ Measurer components that can be attached per FCS component are different
  
 ## {Circular, CharacterCircular} FCS SceneComponent
 ***If Character's AirControl value is fairly low, CharacterLinearFCS may be used during jumping 
-(When the AirControl value is low, it is almost linear movement during jumping)***
+(When the AirControl value is low, it is almost linear movement during jumping)***  
+<br />
+***How to use CharacterLinearFCS and CharacterCircularFCS together*** &rarr; [Tutorial Video](https://www.youtube.com/watch?v=YHbEk__dcUI)
 ### `Variables`
 
  |Type|Name|Description|
