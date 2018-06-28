@@ -1,5 +1,6 @@
 # [UE4 Marketplace] PredictionShotPlugin
-[UE4 Marketplace] Prediction Shot Plugin Document
+[UE4 Marketplace] Prediction Shot Plugin Document  
+[Marketplace URL](https://www.unrealengine.com/marketplace/prediction-shot-plugin)
 # Tutorial
 [Demo Video](https://www.youtube.com/watch?v=BrCKP1JALYU)  
 [Tutorial Video](https://www.youtube.com/watch?v=YHbEk__dcUI)
