@@ -4,6 +4,12 @@
 # Tutorial
 [Demo Video](https://www.youtube.com/watch?v=BrCKP1JALYU)  
 [Tutorial Video](https://www.youtube.com/watch?v=YHbEk__dcUI)
+# Changelog
+## Version 1.1
+- Add PredictPos function to calculate predicted position
+- Add HighArc option to shoot projectiles such as grenades at a higher angle
+- Improve accuracy of prediction calculation during circular movement
+- BugFix prediction calculation during counterclockwise circular movement
 # Correspondence table of FCSComponent and MeasurerComponent
 Measurer components that can be attached per FCS component are different
 
@@ -30,7 +36,8 @@ Measurer components that can be attached per FCS component are different
 
  |Return Type|Name|Description|
  |--:|---|---|
- |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To<br>)|Calculate predicted shooting direction<br><br>BulletGravityScale - Set the value of GravityScale set for the bullet to be shot<br>TargetGravityScale - Set the value of GravityScale set for Target|
+ |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To,<br>const bool bHighArc<br>)|Calculate predicted shooting direction<br><br>BulletGravityScale - Set the value of GravityScale set for the bullet to be shot<br>TargetGravityScale - Set the value of GravityScale set for Target|
+ |FVector|PredictPos(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To,<br>const bool bHighArc<br>)|Calculate predicted position<br><br>BulletGravityScale - Set the value of GravityScale set for the bullet to be shot<br>TargetGravityScale - Set the value of GravityScale set for Target|
  
 ## {Circular, CharacterCircular} FCS SceneComponent
 ***If Character's AirControl value is fairly low, CharacterLinearFCS may be used during jumping 
@@ -51,7 +58,8 @@ Measurer components that can be attached per FCS component are different
 
  |Return Type|Name|Description|
  |--:|---|---|
- |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To<br>)|Calculate predicted shooting direction<br><br>BulletGravityScale - Set the value of GravityScale set for the bullet to be shot<br>TargetGravityScale - Set the value of GravityScale set for Target|
+ |FRotator|Prediction(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To,<br>const bool bHighArc<br>)|Calculate predicted shooting direction<br><br>BulletGravityScale - Set the value of GravityScale set for the bullet to be shot<br>TargetGravityScale - Set the value of GravityScale set for Target|
+  |FVector|PredictPos(<br>const float BulletSpeed,<br>const float BulletGravityScale,<br>const float TargetGravityScale,<br>const FVector& From,<br>const FVector& To,<br>const bool bHighArc<br>)|Calculate predicted position<br><br>BulletGravityScale - Set the value of GravityScale set for the bullet to be shot<br>TargetGravityScale - Set the value of GravityScale set for Target|
  
 ## SMA {Velocity, Angular} Measurer SceneComponent
 ### `Variables`
@@ -95,7 +103,6 @@ Measurer components that can be attached per FCS component are different
 |float|GetAngularVelocity()|Get angular velocity (radian)|
 |float|GetAngularAcceleration()|Get angular acceleration (radian)|
 |TArray&lt;FVector&gt;|GetLocations()|Position of the last 3 frames|
-|int32|GetStartIndex()|An index representing the oldest position among the data acquired by the above GetLocations
 
 ## VelocityMeasurable Interface
 By implementing this interface and attaching to the {CharacterLinear, Linear} FCS component, you can calculate predicted shots with your own measurement method
