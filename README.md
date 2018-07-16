@@ -102,7 +102,7 @@ Measurer components that can be attached per FCS component are different
 |float|GetJumpVelocity()|Get speed in the Z direction when jumping (Character only)|
 |float|GetAngularVelocity()|Get angular velocity (radian)|
 |float|GetAngularAcceleration()|Get angular acceleration (radian)|
-|TArray&lt;FVector&gt;|GetLocations()|Position of the last 3 frames|
+|TArray&lt;FVector&gt;|GetLocations()|Prev 3 locations (Index 0 -> the oldest position, Index 2 -> Newest position)|
 
 ## VelocityMeasurable Interface
 By implementing this interface and attaching to the {CharacterLinear, Linear} FCS component, you can calculate predicted shots with your own measurement method
