@@ -5,6 +5,9 @@
 [Demo Video](https://www.youtube.com/watch?v=BrCKP1JALYU)  
 [Tutorial Video](https://www.youtube.com/watch?v=YHbEk__dcUI)
 # Changelog
+## Version 1.2
+- Optimized processing when the predicted position collides with a wall etc.
+- Add SetAccuracy Node (Ability to change Accuracy at runtime)
 ## Version 1.1
 - Add PredictPos function to calculate predicted position
 - Add HighArc option to shoot projectiles such as grenades at a higher angle
