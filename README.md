@@ -32,7 +32,7 @@ Measurer components that can be attached per FCS component are different
  |int32|Accuracy|Accuracy of prediction calculation|
  |float|ObserverTickInterval|Observe the target at the interval|
  |ECollisionChannel|TraceChannel|Trace channel for measuring the height of the landing point|
- |float|BiasFromGround|Z direction bias from the ground to adjust the predicted shooting point|
+ |float|OffsetFromCollisionSurface|Offset value when the predicted point collides with the surface (Default = 50)|
  |IVelocityObservable|Observer|Object implementing IVelocityObservable|
  
 ### `Functions`
@@ -54,7 +54,7 @@ Measurer components that can be attached per FCS component are different
  |int32|Accuracy|Accuracy of prediction calculation|
  |float|ObserverTickInterval|Observe the target at the interval|
  |ECollisionChannel|TraceChannel|Trace channel for measuring the height of the landing point|
- |float|BiasFromGround|Z direction bias from the ground to adjust the predicted shooting point|
+ |float|OffsetFromCollisionSurface|Offset value when the predicted point collides with the surface (Default = 50)|
  |IAngularObservable|Observer|Object implementing IAngularObservable|
  
 ### `Functions`
