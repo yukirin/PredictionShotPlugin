@@ -2,6 +2,8 @@
 [UE4 Marketplace] Prediction Shot Plugin Document  
 [Marketplace URL](https://www.unrealengine.com/marketplace/prediction-shot-plugin)
 # Tutorial
+## Basic Tutorial
+![BasicTutorial](https://github.com/yukirin/PredictionShotPlugin/blob/bb1c46ed6f0bd2851af09f511c385973d0644d8d/images/basic_tutorial.png "Basic Tutorial")
 # Changelog
 ## Version 1.2
 - Optimized processing when the predicted position collides with a wall etc.
