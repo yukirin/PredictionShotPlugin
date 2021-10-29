@@ -4,6 +4,12 @@
 # Tutorial
 ## Basic Tutorial
 ![BasicTutorial](https://github.com/yukirin/PredictionShotPlugin/blob/bb1c46ed6f0bd2851af09f511c385973d0644d8d/images/basic_tutorial.png?raw=true "Basic Tutorial")
+## Advanced Tutorial
+When combining linear movement and circular movement, implement as follows.
+1. Build Linear FCS and Circular FCS by referring to the basic tutorial.
+1. Use the GetAngularVelocity function from the Observer property of the CircularFCS component to get the angular velocity (rad)
+1. Switch between Linear FCS and Circular FCS using the obtained angular velocity
+1. Please set the reference value for switching by yourself.
 # Changelog
 ## Version 1.2
 - Optimized processing when the predicted position collides with a wall etc.
